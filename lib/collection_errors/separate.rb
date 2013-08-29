@@ -19,7 +19,7 @@ module CollectionErrors
       defaults.compact!
       defaults.flatten!
 
-      I18n.translate(defaults.shift, :collection_name => self.class.human_attribute_name(collection_name), :index => index, :message => message, :default => defaults)
+      I18n.translate(defaults.shift, :collection_name => self.class.human_attribute_name(collection_name), :index => index, :original_message => message, :default => defaults)
     end
 
     module ClassMethods
