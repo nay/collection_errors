@@ -14,7 +14,7 @@ module CollectionErrors
       defaults << :"#{self.class.i18n_scope}.errors.messages.#{type}"
       defaults << :"errors.attributes.#{collection_name}.#{type}"
       defaults << :"errors.messages.#{type}"
-      defaults << "%{collection_name}%{index} %{message}"
+      defaults << "%{collection_name}%{index} %{original_message}"
 
       defaults.compact!
       defaults.flatten!
